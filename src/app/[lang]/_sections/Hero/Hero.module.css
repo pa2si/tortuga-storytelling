@@ -1,0 +1,10 @@
+/* .heroContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, white 0%, white 1%, transparent 99%);
+  z-index: 1;
+} */
