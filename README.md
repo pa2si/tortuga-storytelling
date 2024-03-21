@@ -1,9 +1,9 @@
-v 1.0.12
+v 1.0.13
 
 What's new:
 
-- again event-card changes
-- modal adaption max-h
+- mobile-bg-adjust now max 1279px
+-
 
 Done:
 

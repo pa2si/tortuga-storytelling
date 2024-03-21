@@ -65,6 +65,13 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
+@media (max-width: 1279px) {
+  .mobile-bg-adjust {
+    background-size: 240% !important; /* Adjust to suit your needs */
+    background-position: center !important; /* Adjust to focus on a particular area */
+  }
+}
+
 /* Event Arrows */
 
 .slider-events .slick-prev::before,
@@ -239,12 +246,5 @@ body {
       margin-left: 6rem;
       gap: 0.75rem;
     }
-  }
-}
-
-@media (max-width: 639px) {
-  .mobile-bg-adjust {
-    background-size: 240% !important; /* Adjust to suit your needs */
-    background-position: center !important; /* Adjust to focus on a particular area */
   }
 }
