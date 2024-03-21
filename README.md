@@ -1,8 +1,9 @@
-v 1.0.11
+v 1.0.12
 
 What's new:
 
-- h-fit-content removed for event-cards
+- again event-card changes
+- modal adaption max-h
 
 Done:
 

@@ -19,7 +19,7 @@ const Event = ({
 }) => {
   const { openModal } = useGlobalContext();
   return (
-    <article className="flex flex-col max-w-sm min-h-[42rem] md:min-w-[20rem] xl:max-h-[45rem] xl:my-10 xl:h-[37rem] 2xl:h-[40rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto ">
+    <article className="flex flex-col max-w-sm min-h-[42rem] md:min-w-[20rem] xl:h-[45rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto ">
       <div className="relative w-full h-[17.3rem] shadow-lg">
         <Image
           src={image.filename}
