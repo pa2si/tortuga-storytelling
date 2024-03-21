@@ -41,7 +41,7 @@ const About = ({ fetchedData }) => {
             </div>
             {/* About Description */}
             <article className="grid grid-cols-1 text-slate-900 mt-8 mb-12 xl:grid-cols-5 lg:items-center lg:mb-8">
-              <div className="col-span-3 px-4 sm:px-8 sm:text-xl lg:text-[1.2rem] text-justify lg:px-0  order-last xl:order-first xl:ml-10 ">
+              <div className="col-span-3 px-4 sm:px-8 sm:text-xl lg:text-[1.2rem] text-justify lg:px-0 order-last xl:order-first xl:ml-10 ">
                 <p className="text-gray-800 font-text leading-7 sm:leading-8 xl:leading-9 lg:mx-8">
                   {description}
                 </p>

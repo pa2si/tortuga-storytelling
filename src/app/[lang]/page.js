@@ -25,12 +25,12 @@ export async function generateMetadata({ params: { lang } }) {
       apple: storyData.landing_page_meta_data.apple_touch_icon.filename,
     },
     robots: {
-      index: true,
-      follow: true,
+      index: false,
+      follow: false,
       nocache: true,
       googleBot: {
-        index: true,
-        follow: true,
+        index: false,
+        follow: false,
         noimageindex: false,
         'max-video-preview': -1,
         'max-image-preview': 'large',

@@ -53,13 +53,30 @@ const Modal = () => {
           </p>
           <div className="mt-4 pt-1 leading-[1.4rem] text-[1.1rem] md:text-[1.2rem] md:leading-[1.5rem] lg:text-[1.3rem] lg:leading-[1.7rem]">
             <div className=" bg-tortuga-light h-[2px] mb-2 "></div>{' '}
-            <p className="text-tortuga-dark"> {selectedEvent.date}</p>
-            <p className="text-gray-700"> {selectedEvent.location}</p>
-            <p className="text-gray-700"> {selectedEvent.city}</p>
+            <p
+              className={`text-tortuga-dark text-[1.3rem] lg:text-[1.4rem] tracking-wide ${
+                !selectedEvent.time ? 'mb-2' : ''
+              }`}
+            >
+              {selectedEvent.date}
+            </p>
+            {selectedEvent.time && (
+              <p className="text-tortuga-dark text-[1.2rem] lg:text-[1.3rem] mb-3 leading-9 md:leading-5 tracking-tighter">
+                {selectedEvent.time}
+              </p>
+            )}
+            <p className="text-gray-700 font-bold"> {selectedEvent.location}</p>
+            {selectedEvent.city && (
+              <p className="text-gray-700">{selectedEvent.city}</p>
+            )}
             <p className="text-gray-700">{selectedEvent.address}</p>
             <p className="text-gray-700">{selectedEvent.postal}</p>
             {selectedEvent.event_language && (
-              <p className="text-gray-700 mt-2">
+              <p
+                className={`text-gray-700 mt-2 ${
+                  !selectedEvent.fb_logo.filename ? 'mb-4' : ''
+                }`}
+              >
                 {`(${selectedEvent.event_language})`}
               </p>
             )}

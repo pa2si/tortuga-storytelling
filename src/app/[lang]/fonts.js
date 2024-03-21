@@ -7,6 +7,7 @@ export const playpenSans = Playpen_Sans({
   subsets: ['latin'],
   weight: ['300', '400'],
   variable: '--font-playpenSans',
+  adjustFontFallback: false,
 });
 
 export const indieFlower = Indie_Flower({
@@ -23,6 +24,6 @@ export const kalam = Kalam({
 
 export const abhayaLibre = Abhaya_Libre({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['400', '700'],
   variable: '--font-abhayaLibre',
 });

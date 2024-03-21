@@ -15,6 +15,7 @@ const Event = ({
   btn_text,
   fb_logo,
   event_language,
+  time,
 }) => {
   const { openModal } = useGlobalContext();
   return (
@@ -35,8 +36,19 @@ const Event = ({
       <div className="flex-grow px-6 py-4" style={{ fontFamily: 'arial' }}>
         <h3 className="text-[1.8rem] mb-2 font-kalam leading-9">{title}</h3>
         <div className="leading-7 text-[1.4rem] sm:text-[1.2rem]">
-          <p className="text-tortuga-dark mb-3">{date}</p>
-          <p className="text-gray-700 font-bold">{city}</p>
+          <p
+            className={`text-tortuga-dark text-[1.3rem] lg:text-[1.4rem] ${
+              !time ? 'mb-3' : ''
+            }`}
+          >
+            {date}
+          </p>
+          {time && (
+            <p className="text-tortuga-dark text-[1.2rem] tracking-tight lg:text-[1.3rem] mb-3 leading-9 md:leading-8">
+              {time}
+            </p>
+          )}
+          {city && <p className="text-gray-700 font-bold">{city}</p>}
           <p className="text-gray-700 font-bold">{location}</p>
           <p className="text-gray-700 ">{address}</p>
           <p className="text-gray-700 ">{postal}</p>
@@ -63,6 +75,7 @@ const Event = ({
               title,
               fb_logo,
               event_language,
+              time,
             })
           }
         >

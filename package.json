@@ -1,6 +1,6 @@
 {
   "name": "tortuga",
-  "version": "v 1.0.8",
+  "version": "v 1.0.10",
   "private": true,
   "scripts": {
     "dev": "next dev",

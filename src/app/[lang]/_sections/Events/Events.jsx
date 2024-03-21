@@ -41,7 +41,7 @@ const Events = ({ fetchedData, lang }) => {
           <InView />
           {/* Conditionally render this div if more than one event card */}
           {futureEvents && futureEvents.length > 1 && (
-            <div className="flex font-title text-xl absolute bottom-40 left-1/2 transform -translate-x-1/2 visible md:hidden">
+            <div className="flex font-title text-xl absolute bottom-40 lg:bottom-32 left-1/2 transform -translate-x-1/2 visible md:hidden">
               <MdArrowBackIos />
               <p>{slider_text}</p>
               <MdArrowForwardIos />

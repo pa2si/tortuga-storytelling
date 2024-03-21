@@ -101,7 +101,18 @@ const SingleEvent = async ({ params }) => {
                 <div className="grid grid-col justify-end text-right">
                   <div className=" bg-tortuga-light h-[2px] mb-2 "></div>{' '}
                   {/* Line Element */}
-                  <p className="text-tortuga-dark">{selectedEvent.date}</p>
+                  <p
+                    className={`text-tortuga-dark ${
+                      !selectedEvent.time ? 'mb-3' : ''
+                    }`}
+                  >
+                    {selectedEvent.date}
+                  </p>
+                  {selectedEvent.time && (
+                    <p className="text-tortuga-dark mb-2">
+                      {selectedEvent.time}
+                    </p>
+                  )}
                   <p>{selectedEvent.city}</p>
                   <p className="font-bold">{selectedEvent.location}</p>
                   <p>
