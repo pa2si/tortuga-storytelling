@@ -22,7 +22,7 @@ const Modal = () => {
       onClick={handleOverlayClick}
     >
       {isModalOpen && selectedEvent ? (
-        <div className="relative bg-white max-h-screen-30 lg:max-w-3xl xl:max-w-4xl text-center grid place-items-center pt-8 pb-2 px-6 rounded-md overflow-scroll">
+        <div className="relative bg-white max-h-[75vh] lg:max-w-3xl xl:max-w-4xl text-center grid place-items-center pt-8 pb-2 px-6 rounded-md overflow-scroll">
           {/* Title */}
           <div className=" w-full flex flex-col justify-center items-center mb-4 ">
             <div className="flex flex-col items-center">

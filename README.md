@@ -1,14 +1,8 @@
-v 1.0.10
+v 1.0.11
 
 What's new:
 
-- after deleting the node-module and package-lock.json file and believing it can just be recreated as it was with npm install i couldn't redeploy it anymore to verccel. so i used the last working version and created a new repository just in case. i deployed it, and now its working (the deployment). i will here recreate everything that i commited after version 1.0.8.
-
-- robots are set to false
-- at font.js adjustFontFallback: false, at Playpen Sans added
-- at Event.js events-card got added a time paragraph and
-- at Events.js a bottom- adjustment due to the new paragraph in event-cards
-- some conditional margin to paragraphs of event-cards
+- h-fit-content removed for event-cards
 
 Done:
 
