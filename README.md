@@ -1,8 +1,8 @@
-v 1.0.13
+v 1.0.14
 
 What's new:
 
-- mobile-bg-adjust now max 1279px
+- goes online again and robots crawling allowed again
 -
 
 Done:
