@@ -1,9 +1,8 @@
-v 1.0.15
+v 1.0.16
 
 What's new:
 
-- tracking class for time paragraph in event card adapted
--
+- dynamic bg size for hero and about section adapted. className: mobile-bg-adjust
 
 Done:
 

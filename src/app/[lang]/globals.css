@@ -65,12 +65,31 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 767px) {
   .mobile-bg-adjust {
-    background-size: 240% !important; /* Adjust to suit your needs */
-    background-position: center !important; /* Adjust to focus on a particular area */
+    background-size: 240% !important;
+    background-position: center !important;
   }
 }
+@media (min-width: 768px) {
+  .mobile-bg-adjust {
+    background-size: 180% !important;
+    background-position: center !important;
+  }
+}
+@media (min-width: 1280px) {
+  .mobile-bg-adjust {
+    background-size: cover !important;
+    background-position: center !important;
+  }
+}
+
+/* @media (max-width: 1279px) {
+  .mobile-bg-adjust {
+    background-size: 240% !important;
+    background-position: center !important;
+  }
+} */
 
 /* Event Arrows */
 

@@ -34,6 +34,7 @@ const Hero = ({ fetchedData }) => {
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
+      className="mobile-bg-adjust"
     >
       <motion.section
         className={`relative h-[30rem] sm:h-[42rem] w-full  ${styles.heroContainer}`}
