@@ -44,7 +44,7 @@ const Event = ({
             {date}
           </p>
           {time && (
-            <p className="text-tortuga-dark text-[1.2rem] tracking-tight lg:text-[1.3rem] mb-3 leading-9 md:leading-8">
+            <p className="text-tortuga-dark text-[1.2rem] tracking-normal lg:text-[1.3rem] mb-3 leading-9 md:leading-8">
               {time}
             </p>
           )}

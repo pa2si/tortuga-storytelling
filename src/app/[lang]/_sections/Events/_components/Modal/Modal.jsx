@@ -61,7 +61,7 @@ const Modal = () => {
               {selectedEvent.date}
             </p>
             {selectedEvent.time && (
-              <p className="text-tortuga-dark text-[1.2rem] lg:text-[1.3rem] mb-3 leading-9 md:leading-5 tracking-tighter">
+              <p className="text-tortuga-dark text-[1.2rem] lg:text-[1.3rem] mb-3 leading-9 md:leading-5 tracking-normal">
                 {selectedEvent.time}
               </p>
             )}

@@ -1,8 +1,8 @@
-v 1.0.14
+v 1.0.15
 
 What's new:
 
-- goes online again and robots crawling allowed again
+- tracking class for time paragraph in event card adapted
 -
 
 Done:
