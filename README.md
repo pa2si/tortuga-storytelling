@@ -1,8 +1,9 @@
-v 1.0.17
+v 1.0.18
 
 What's new:
 
-- NEXT_PUBLIC_BASE_URL and fallback updated to the actual domain!
+- NEXT_PUBLIC_BASE_URL and fallback updated "env. file and layout.js" to the actual domain!
+- i just cause a redeply with this
 
 Done:
 
