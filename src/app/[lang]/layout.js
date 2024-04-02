@@ -7,7 +7,7 @@ import { AppProvider } from '@/utils/context';
 
 export const metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+    process.env.NEXT_PUBLIC_BASE_URL || 'https://www.tortugastorytelling.de'
   ),
   title: {
     default: 'Tortuga Storytelling',

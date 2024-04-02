@@ -1,8 +1,8 @@
-v 1.0.16
+v 1.0.17
 
 What's new:
 
-- dynamic bg size for hero and about section adapted. className: mobile-bg-adjust
+- NEXT_PUBLIC_BASE_URL and fallback updated to the actual domain!
 
 Done:
 
