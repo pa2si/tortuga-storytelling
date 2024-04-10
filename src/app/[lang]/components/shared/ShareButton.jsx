@@ -17,7 +17,7 @@ const ShareButton = ({
           text: shareBtnText,
           url: window.location.href,
         });
-        toast.success(shareBtnDesktopCopiedText);
+        toast.success(shareBtnMobileSuccessText);
       } catch (error) {
         toast.error(
           `Error sharing content: ${error.message || 'Unknown error'}`
@@ -26,7 +26,7 @@ const ShareButton = ({
     } else {
       try {
         await navigator.clipboard.writeText(window.location.href);
-        toast.success(shareBtnMobileSuccessText);
+        toast.success(shareBtnDesktopCopiedText);
       } catch (error) {
         toast.error(`Failed to copy URL: ${error.message || 'Unknown error'}`);
       }

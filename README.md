@@ -1,8 +1,8 @@
-v 1.0.26
+v 1.0.27
 
 What's new:
 
-- again trying to fetch the openGraph image from the event. again
+- copy event btn text mix up fixed
 
 Done:
 
