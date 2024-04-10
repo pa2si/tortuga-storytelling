@@ -1,10 +1,14 @@
 v 1.0.19
 
-What's new:
-
 - single Event Page has now a share button
 - og Graph and tiwtter added to single event dynamic route
 - onloading replaced with onLoad in Image component for single event
+
+v 1.0.20
+
+What's new:
+
+- openGraph metadata for single Event has a new src
 
 Done:
 
