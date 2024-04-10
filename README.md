@@ -14,9 +14,13 @@ v 1.0.21
 
 v 1.0.22
 
+- openGraph metadata for single Event has a now new width and height
+
+v 1.0.23
+
 What's new:
 
-- openGraph metadata for single Event has a now new width and height
+- openGraph and twitter metadata back to where it was
 
 Done:
 
