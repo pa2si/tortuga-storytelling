@@ -40,7 +40,7 @@ const EventImage = ({ imageData }) => {
           blurDataURL={blurDataURL}
           className="rounded-md shadow-lg max-h-80 hover:cursor-pointer hover:scale-105 transition-all duration-300 ease-in-out "
           onClick={handleImageClick}
-          onLoadingComplete={() => setImageLoaded(true)}
+          onLoad={() => setImageLoaded(true)}
           style={{ display: imageLoaded ? 'block' : 'none' }}
         />
         <ImageModal />

@@ -1,9 +1,8 @@
 import './globals.css';
 import Header from './_sections/Header/Header';
-
 import { indieFlower, kalam, abhayaLibre, playpenSans } from './fonts';
-
 import { AppProvider } from '@/utils/context';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata = {
   metadataBase: new URL(
@@ -29,6 +28,7 @@ export default async function RootLayout({ children, params }) {
         <AppProvider>
           <Header params={params} />
           {children}
+          <Toaster position="bottom-right" />
         </AppProvider>
       </body>
     </html>

@@ -1,9 +1,10 @@
-v 1.0.18
+v 1.0.19
 
 What's new:
 
-- NEXT_PUBLIC_BASE_URL and fallback updated "env. file and layout.js" to the actual domain!
-- i just cause a redeply with this
+- single Event Page has now a share button
+- og Graph and tiwtter added to single event dynamic route
+- onloading replaced with onLoad in Image component for single event
 
 Done:
 

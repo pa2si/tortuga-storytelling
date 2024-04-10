@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import EventImage from './_components/EventImage';
 import { getFetchData } from '@/utils/fetchingData';
+import ShareButton from '../../components/shared/ShareButton';
 
 export async function generateMetadata({ params: { lang, id } }) {
   const storyData = await getFetchData(lang);
@@ -9,6 +10,12 @@ export async function generateMetadata({ params: { lang, id } }) {
   const selectedEvent = events.find((event) => event._uid === id);
 
   return {
+    openGraph: {
+      images: storyData.landing_page_meta_data.open_graph_image.filename,
+    },
+    twitter: {
+      images: storyData.landing_page_meta_data.twitter_image.filename,
+    },
     title: selectedEvent.title,
     description: storyData.single_event_section.meta_data_description,
     alternates: {
@@ -123,6 +130,22 @@ const SingleEvent = async ({ params }) => {
                       {`(${selectedEvent.event_language})`}
                     </p>
                   )}
+                  <div className="flex justify-end mt-2">
+                    <ShareButton
+                      eventTitle={selectedEvent.title}
+                      shareBtnText={
+                        storyData.single_event_section.share_btn_text
+                      }
+                      shareBtnDesktopCopiedText={
+                        storyData.single_event_section
+                          .share_btn_desktop_copied_text
+                      }
+                      shareBtnMobileSuccessText={
+                        storyData.single_event_section
+                          .share_btn_mobile_success_text
+                      }
+                    />
+                  </div>
                 </div>
               </div>
             </div>
