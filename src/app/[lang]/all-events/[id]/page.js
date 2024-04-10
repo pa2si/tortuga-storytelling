@@ -17,8 +17,8 @@ export async function generateMetadata({ params: { lang, id } }, parent) {
       images: [
         {
           url: selectedEvent.image.filename,
-          width: 1200,
-          height: 630,
+          width: 300,
+          height: 200,
           alt: 'Product Image',
         },
         ...previousImages,
