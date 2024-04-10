@@ -1,8 +1,8 @@
-v 1.0.24
+v 1.0.25
 
 What's new:
 
-- openGraph image no fetches the whatsapp image
+- again trying to fetch the openGraph image from the event
 
 Done:
 
