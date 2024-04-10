@@ -3,15 +3,26 @@ import EventImage from './_components/EventImage';
 import { getFetchData } from '@/utils/fetchingData';
 import ShareButton from '../../components/shared/ShareButton';
 
-export async function generateMetadata({ params: { lang, id } }) {
+export async function generateMetadata({ params: { lang, id } }, parent) {
   const storyData = await getFetchData(lang);
 
   const events = storyData.events_section.event_cards;
   const selectedEvent = events.find((event) => event._uid === id);
 
+  // Use an existing parent image or specify a new one
+  const previousImages = (await parent).openGraph?.images || [];
+
   return {
     openGraph: {
-      images: selectedEvent.image.filename,
+      images: [
+        {
+          url: selectedEvent.image.filename,
+          width: 1200,
+          height: 630,
+          alt: 'Product Image',
+        },
+        ...previousImages,
+      ],
     },
     twitter: {
       images: storyData.landing_page_meta_data.twitter_image.filename,

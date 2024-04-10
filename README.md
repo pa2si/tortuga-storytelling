@@ -6,9 +6,13 @@ v 1.0.19
 
 v 1.0.20
 
+- openGraph metadata for single Event has a new src
+
+v 1.0.21
+
 What's new:
 
-- openGraph metadata for single Event has a new src
+- openGraph metadata for single Event has a now width and height
 
 Done:
 
