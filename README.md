@@ -1,26 +1,8 @@
-v 1.0.19
-
-- single Event Page has now a share button
-- og Graph and tiwtter added to single event dynamic route
-- onloading replaced with onLoad in Image component for single event
-
-v 1.0.20
-
-- openGraph metadata for single Event has a new src
-
-v 1.0.21
-
-- openGraph metadata for single Event has a now width and height
-
-v 1.0.22
-
-- openGraph metadata for single Event has a now new width and height
-
-v 1.0.23
+v 1.0.24
 
 What's new:
 
-- openGraph and twitter metadata back to where it was
+- openGraph image no fetches the whatsapp image
 
 Done:
 

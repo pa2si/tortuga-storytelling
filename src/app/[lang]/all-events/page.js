@@ -7,7 +7,7 @@ export async function generateMetadata({ params: { lang } }) {
 
   return {
     openGraph: {
-      images: storyData.landing_page_meta_data.open_graph_image.filename,
+      images: storyData.landing_page_meta_data.open_graph_whatsapp.filename,
     },
     twitter: {
       images: storyData.landing_page_meta_data.twitter_image.filename,
