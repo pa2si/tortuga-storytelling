@@ -13,9 +13,7 @@ export async function generateMetadata({ params: { lang, id } }) {
     openGraph: {
       images: [{ url: selectedEvent.image.filename, width: 256, height: 256 }],
     },
-    openGraph: {
-      images: selectedEvent.image.filename,
-    },
+
     // openGraph: {
     //   images: storyData.landing_page_meta_data.open_graph_whatsapp.filename,
     // },

@@ -1,8 +1,8 @@
-v 1.0.25
+v 1.0.26
 
 What's new:
 
-- again trying to fetch the openGraph image from the event
+- again trying to fetch the openGraph image from the event. again
 
 Done:
 
