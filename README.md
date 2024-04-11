@@ -1,8 +1,8 @@
-v 1.0.28
+v 1.0.29
 
 What's new:
 
-- copy event btn text mix up fixed. 2nd try
+- copy event btn text mix up fixed. back to first correction
 
 Done:
 
