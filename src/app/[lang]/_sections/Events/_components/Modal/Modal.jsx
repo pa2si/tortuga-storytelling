@@ -4,6 +4,8 @@ import { useGlobalContext } from '@/utils/context';
 import Image from 'next/image';
 import styles from './Modal.module.css';
 import { FaTimes } from 'react-icons/fa';
+import { CiCalendar } from 'react-icons/ci';
+import { SlClock } from 'react-icons/sl';
 
 const Modal = () => {
   const { isModalOpen, closeModal, selectedEvent } = useGlobalContext();
@@ -53,18 +55,30 @@ const Modal = () => {
           </p>
           <div className="mt-4 pt-1 leading-[1.4rem] text-[1.1rem] md:text-[1.2rem] md:leading-[1.5rem] lg:text-[1.3rem] lg:leading-[1.7rem]">
             <div className=" bg-tortuga-light h-[2px] mb-2 "></div>{' '}
-            <p
-              className={`text-tortuga-dark text-[1.3rem] lg:text-[1.4rem] tracking-wide ${
-                !selectedEvent.time ? 'mb-2' : ''
-              }`}
-            >
-              {selectedEvent.date}
-            </p>
-            {selectedEvent.time && (
-              <p className="text-tortuga-dark text-[1.2rem] lg:text-[1.3rem] mb-3 leading-9 md:leading-5 tracking-normal">
-                {selectedEvent.time}
-              </p>
-            )}
+            <div className="flex  items-center gap-4 mb-3">
+              <div
+                className={`text-tortuga-dark text-[1.3rem] lg:text-[1.4rem] tracking-wide ${
+                  !selectedEvent.time ? 'mb-2' : ''
+                }`}
+              >
+                <div className="flex gap-2 items-center">
+                  <i className="text-xl ">
+                    <CiCalendar />
+                  </i>
+                  <p>{selectedEvent.date}</p>
+                </div>
+              </div>
+              {selectedEvent.time && (
+                <div className="text-tortuga-dark text-[1.3rem] lg:text-[1.4rem]  leading-9 md:leading-5 tracking-normal">
+                  <div className="flex gap-2 items-center">
+                    <i className="text-[16px] ">
+                      <SlClock />
+                    </i>
+                    <p>{selectedEvent.time}</p>
+                  </div>
+                </div>
+              )}
+            </div>
             <p className="text-gray-700 font-bold"> {selectedEvent.location}</p>
             {selectedEvent.city && (
               <p className="text-gray-700">{selectedEvent.city}</p>
@@ -86,12 +100,14 @@ const Modal = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src={selectedEvent.fb_logo.filename}
-              alt={selectedEvent.fb_logo.alt}
-              width={80}
-              height={80}
-            />
+            {selectedEvent.fb_logo.filename && (
+              <Image
+                src={selectedEvent.fb_logo.filename}
+                alt={selectedEvent.fb_logo.alt}
+                width={80}
+                height={80}
+              />
+            )}
           </a>
           <button
             className={`text-red-600 ${styles.close_modal_btn}`}

@@ -2,6 +2,8 @@ import Link from 'next/link';
 import EventImage from './_components/EventImage';
 import { getFetchData } from '@/utils/fetchingData';
 import ShareButton from '../../components/shared/ShareButton';
+import { CiCalendar } from 'react-icons/ci';
+import { SlClock } from 'react-icons/sl';
 
 export async function generateMetadata({ params: { lang, id } }) {
   const storyData = await getFetchData(lang);
@@ -113,18 +115,30 @@ const SingleEvent = async ({ params }) => {
                 <div className="grid grid-col justify-end text-right">
                   <div className=" bg-tortuga-light h-[2px] mb-2 "></div>{' '}
                   {/* Line Element */}
-                  <p
-                    className={`text-tortuga-dark ${
-                      !selectedEvent.time ? 'mb-3' : ''
-                    }`}
-                  >
-                    {selectedEvent.date}
-                  </p>
-                  {selectedEvent.time && (
-                    <p className="text-tortuga-dark mb-2">
-                      {selectedEvent.time}
-                    </p>
-                  )}
+                  <div className="flex flex-col items-end gap-1">
+                    <div
+                      className={`text-tortuga-dark ${
+                        !selectedEvent.time ? 'mb-3' : ''
+                      }`}
+                    >
+                      <div className="flex gap-2 items-center">
+                        <p>{selectedEvent.date}</p>
+                        <i className="text-xl">
+                          <CiCalendar />
+                        </i>
+                      </div>
+                    </div>
+                    {selectedEvent.time && (
+                      <div className="text-tortuga-dark mb-2">
+                        <div className="flex gap-2 items-center">
+                          <p>{selectedEvent.time}</p>
+                          <i className="text-[17px]">
+                            <SlClock />
+                          </i>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                   <p>{selectedEvent.city}</p>
                   <p className="font-bold">{selectedEvent.location}</p>
                   <p>

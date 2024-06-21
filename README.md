@@ -1,8 +1,9 @@
-v 1.0.30
+v 1.0.31
 
 What's new:
 
-- more info button on event card (Event.jsx) is now hardcoded depending on the lang
+- react icons für time und calendar added in event card (Event.jsx, Modal.jsx, all-events page.jsx, single event dynamic page)
+- logical AND operator for Image in Modal of event
 
 Done:
 

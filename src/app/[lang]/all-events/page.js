@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getFetchData } from '@/utils/fetchingData';
+import { CiCalendar } from 'react-icons/ci';
 
 export async function generateMetadata({ params: { lang } }) {
   const storyData = await getFetchData(lang);
@@ -86,7 +87,14 @@ const AllEvents = async ({ params: { lang } }) => {
                   <h3 className="text-lg leading-5 sm:leading-7 sm:text-2xl mb-2 font-kalam">
                     {event.title}
                   </h3>
-                  <p className=" mb-2  text-tortuga-dark ">{event.date}</p>
+                  <div className=" mb-2  text-tortuga-dark ">
+                    <div className="flex gap-2 items-center">
+                      <i className="text-xl ">
+                        <CiCalendar />
+                      </i>
+                      <p>{event.date}</p>
+                    </div>
+                  </div>
                 </div>
                 <div className="text-sm px-6 ot-1 sm:pt-4 pb-2 flex justify-center xl:hidden ">
                   <Link
