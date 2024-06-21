@@ -4,7 +4,7 @@ import Slider from 'react-slick';
 import Event from './Event';
 import { MotionDiv } from '@/utils/MotionDiv';
 
-const SlickComp = ({ fetchedData }) => {
+const SlickComp = ({ fetchedData, lang }) => {
   const { event_cards } = fetchedData;
 
   const slideIn = {
@@ -66,7 +66,7 @@ const SlickComp = ({ fetchedData }) => {
     >
       <Slider {...settings}>
         {futureEvents.map((event) => (
-          <Event key={event._uid} {...event} />
+          <Event key={event._uid} {...event} lang={lang} />
         ))}
       </Slider>
     </MotionDiv>

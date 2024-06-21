@@ -1,8 +1,8 @@
-v 1.0.29
+v 1.0.30
 
 What's new:
 
-- copy event btn text mix up fixed. back to first correction
+- more info button on event card (Event.jsx) is now hardcoded depending on the lang
 
 Done:
 

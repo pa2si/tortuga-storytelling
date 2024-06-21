@@ -37,7 +37,7 @@ const Events = ({ fetchedData, lang }) => {
               </div>
             </div>
           </div>
-          <SlickComp fetchedData={fetchedData} />
+          <SlickComp fetchedData={fetchedData} lang={lang} />
           <InView />
           {/* Conditionally render this div if more than one event card */}
           {futureEvents && futureEvents.length > 1 && (

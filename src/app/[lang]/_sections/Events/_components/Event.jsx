@@ -12,12 +12,28 @@ const Event = ({
   postal,
   city,
   event_link,
-  btn_text,
   fb_logo,
   event_language,
   time,
+  lang,
 }) => {
   const { openModal } = useGlobalContext();
+
+  const getButtonText = (lang) => {
+    switch (lang) {
+      case 'en':
+        return 'More Info';
+      case 'es':
+        return 'Más Información';
+      case 'de':
+        return 'Mehr Infos';
+      default:
+        return 'More Info';
+    }
+  };
+
+  console.log(lang);
+
   return (
     <article className="flex flex-col max-w-sm min-h-[42rem] md:min-w-[20rem] lg:h-[45rem] md:mb-4 bg-white shadow-xl rounded overflow-hidden mx-auto ">
       <div className="relative w-full h-[17.3rem] shadow-lg">
@@ -79,7 +95,7 @@ const Event = ({
             })
           }
         >
-          {btn_text}
+          {getButtonText(lang)}
         </button>
       </div>
     </article>
