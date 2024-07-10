@@ -113,6 +113,14 @@ const Privacy = ({ fetchedData4 }) => {
       <p className="text-gray-800 mt-2 mb-4">
         Vercel, Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA
       </p>
+      <h5 className="text-gray-800 mt-2 mb-4 text-xl">Auftragsverarbeitung</h5>
+      <p className="text-gray-800 mt-2 mb-4">
+        Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung des
+        oben genannten Dienstes geschlossen. Hierbei handelt es sich um einen
+        datenschutzrechtlich vorgeschriebenen Vertrag, der gewährleistet, dass
+        dieser die personenbezogenen Daten unserer Websitebesucher nur nach
+        unseren Weisungen und unter Einhaltung der DSGVO verarbeitet.
+      </p>
       <h4 className="m-2 text-xl">
         3. Allgemeine Hinweise und Pflicht&shy;informationen
       </h4>

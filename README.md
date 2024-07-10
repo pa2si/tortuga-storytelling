@@ -1,9 +1,8 @@
-v 1.0.31
+v 1.0.32
 
 What's new:
 
-- react icons für time und calendar added in event card (Event.jsx, Modal.jsx, all-events page.jsx, single event dynamic page)
-- logical AND operator for Image in Modal of event
+- Auftragsverarbeitung added to Privacy section
 
 Done:
 
