@@ -1,8 +1,8 @@
-v 1.0.32
+v 1.0.33
 
 What's new:
 
-- Auftragsverarbeitung added to Privacy section
+- share button is now only copy to clipboard on desktop
 
 Done:
 
