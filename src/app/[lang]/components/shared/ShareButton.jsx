@@ -9,8 +9,14 @@ const ShareButton = ({
   shareBtnDesktopCopiedText,
   shareBtnMobileSuccessText,
 }) => {
+  // Function to detect if the device is mobile
+  const isMobileDevice = () => {
+    return /Mobi|Android|iPhone/i.test(navigator.userAgent);
+  };
+
   const handleShare = async () => {
-    if (navigator.share) {
+    // Mobile behavior: Use Web Share API if available
+    if (isMobileDevice() && navigator.share) {
       try {
         await navigator.share({
           title: eventTitle,
@@ -24,9 +30,10 @@ const ShareButton = ({
         );
       }
     } else {
+      // Desktop behavior: Copy to clipboard
       try {
         await navigator.clipboard.writeText(window.location.href);
-        toast.success(shareBtnDesktopCopiedText);
+        toast.success(shareBtnDesktopCopiedText || 'Link copied !');
       } catch (error) {
         toast.error(`Failed to copy URL: ${error.message || 'Unknown error'}`);
       }
@@ -36,7 +43,7 @@ const ShareButton = ({
   return (
     <button
       onClick={handleShare}
-      className="text-2xl text-tortuga-dark hover:text-tortuga-light transition-all duration-200 ease-in-out "
+      className="text-2xl text-tortuga-dark hover:text-tortuga-light transition-all duration-200 ease-in-out"
     >
       <FaRegShareFromSquare />
     </button>
