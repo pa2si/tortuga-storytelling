@@ -55,7 +55,7 @@ const Modal = () => {
           </p>
           <div className="mt-4 pt-1 leading-[1.4rem] text-[1.1rem] md:text-[1.2rem] md:leading-[1.5rem] lg:text-[1.3rem] lg:leading-[1.7rem]">
             <div className=" bg-tortuga-light h-[2px] mb-2 "></div>{' '}
-            <div className="flex  items-center gap-4 mb-3">
+            <div className="flex  items-center gap-4 mb-3 justify-center">
               <div
                 className={`text-tortuga-dark text-[1.3rem] lg:text-[1.4rem] tracking-wide ${
                   !selectedEvent.time ? 'mb-2' : ''

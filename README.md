@@ -1,8 +1,8 @@
-v 1.0.33
+v 1.0.34
 
 What's new:
 
-- share button is now only copy to clipboard on desktop
+- justify-center for date and time row in evnent modal
 
 Done:
 
