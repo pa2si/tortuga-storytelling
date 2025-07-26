@@ -38,6 +38,7 @@ export async function generateMetadata({ params: { lang } }) {
       },
     },
     alternates: {
+      canonical: `/${lang}`,
       languages: {
         en: '/en',
         de: '/de',

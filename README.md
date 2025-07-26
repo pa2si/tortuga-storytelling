@@ -1,3 +1,7 @@
+v 1.0.37
+
+- set canonical also for / page.js
+
 v 1.0.36
 
 - added canonical to / route and /all-events
