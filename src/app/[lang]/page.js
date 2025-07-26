@@ -37,6 +37,13 @@ export async function generateMetadata({ params: { lang } }) {
         'max-snippet': -1,
       },
     },
+    alternates: {
+      languages: {
+        en: '/en',
+        de: '/de',
+        es: '/es',
+      },
+    },
   };
 }
 
@@ -49,7 +56,7 @@ export default async function Home({ params: { lang } }) {
   }
 
   return (
-    <main className="font-abhayaLibre ">
+    <main className='font-abhayaLibre '>
       <Hero fetchedData={storyData.hero_section} />
       <About fetchedData={storyData.about_section} />
       <Events fetchedData={storyData.events_section} lang={lang} />

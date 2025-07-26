@@ -6,7 +6,7 @@ import { Toaster } from 'react-hot-toast';
 
 export const metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL || 'https://www.tortugastorytelling.de'
+    process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
   ),
   title: {
     default: 'Tortuga Storytelling',
@@ -21,14 +21,14 @@ export async function generateStaticParams() {
 
 export default async function RootLayout({ children, params }) {
   return (
-    <html className="scroll-smooth" lang={params.lang}>
+    <html className='scroll-smooth' lang={params.lang}>
       <body
         className={`${playpenSans.variable} ${indieFlower.variable} ${kalam.variable} ${abhayaLibre.variable}`}
       >
         <AppProvider>
           <Header params={params} />
           {children}
-          <Toaster position="bottom-right" />
+          <Toaster position='bottom-right' />
         </AppProvider>
       </body>
     </html>

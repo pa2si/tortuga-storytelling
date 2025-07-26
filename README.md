@@ -1,3 +1,9 @@
+v 1.0.36
+
+- added canonical to / route and /all-events
+- corrected the canonnical tipo of /all-avents${id} to " `/all-events${id}`,"
+- changed in layout.js : process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000' (now to localohost instead of vercel app)
+
 v 1.0.35
 
 - removed FAX dummy number and UmSt dummy ID in Imprint
