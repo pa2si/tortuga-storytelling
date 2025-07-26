@@ -1,3 +1,7 @@
+v 1.0.35
+
+- removed FAX dummy number and UmSt dummy ID in Imprint
+
 v 1.0.34
 
 What's new:
