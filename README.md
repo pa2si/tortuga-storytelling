@@ -1,3 +1,8 @@
+v1.0.38
+
+- now running with node 22.22.18
+- set engine in package.json with 22.x
+
 v 1.0.37
 
 - set canonical also for / page.js
