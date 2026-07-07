@@ -1,3 +1,8 @@
+v1.1.0
+
+- audit fixed all possible vulnerabilities
+- fixed all ui errors
+
 v1.0.38
 
 - now running with node 22.22.18
@@ -41,7 +46,6 @@ Done:
 - About Section
 - Event Carousel with modal button for more info
 - skeleton appears when loading image for singe event site
-
   - Motion Effect in View for Events and Programs
   - Icons view button in Events Section
     - --> leads to all-events route.
