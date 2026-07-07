@@ -114,6 +114,19 @@ body {
   right: -15px !important;
 }
 
+.slider-events .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.slider-events .slick-slide {
+  height: auto;
+}
+
+.slider-events .slick-slide > div {
+  height: 100%;
+}
+
 .slick-slide {
   transform: scale(0.8); /* Scale down all slides */
   transition: transform 0.3s ease; /* Smooth transition */

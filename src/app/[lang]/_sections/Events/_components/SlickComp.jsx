@@ -40,7 +40,7 @@ const SlickComp = ({ fetchedData, lang }) => {
       {
         breakpoint: 640, //max width
         settings: {
-          arrows: false,
+          arrows: true,
           slidesToShow: 1,
           slidesToScroll: 1,
           centerMode: false,
@@ -60,8 +60,8 @@ const SlickComp = ({ fetchedData, lang }) => {
   return (
     <MotionDiv
       variants={slideIn}
-      initial="initial"
-      whileInView="animate"
+      initial='initial'
+      whileInView='animate'
       viewport={{ once: true }}
     >
       <Slider {...settings}>
