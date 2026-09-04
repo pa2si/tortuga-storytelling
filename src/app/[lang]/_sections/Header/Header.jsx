@@ -1,7 +1,7 @@
 import Navbar from './_components/Navbar/Navbar';
 import { getFetchData } from '@/utils/fetchingData';
 
-const Header = async ({ params: { lang } }) => {
+const Header = async ({ lang }) => {
   const storyData = await getFetchData(lang);
 
   return (

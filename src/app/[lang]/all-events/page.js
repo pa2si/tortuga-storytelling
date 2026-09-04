@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { getFetchData } from '@/utils/fetchingData';
 import { CiCalendar } from 'react-icons/ci';
 
-export async function generateMetadata({ params: { lang } }) {
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
   const storyData = await getFetchData(lang);
 
   return {
@@ -26,7 +27,8 @@ export async function generateMetadata({ params: { lang } }) {
   };
 }
 
-const AllEvents = async ({ params: { lang } }) => {
+const AllEvents = async ({ params }) => {
+  const { lang } = await params;
   const storyData = await getFetchData(lang);
 
   const { title, btn_text, moreInfo_btn_text, hover_text, bg } =

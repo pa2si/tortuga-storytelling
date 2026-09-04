@@ -6,7 +6,8 @@ import About from './_sections/About/About';
 import Contacts from './_sections/Contacts/Contacts';
 import { getFetchData } from '@/utils/fetchingData';
 
-export async function generateMetadata({ params: { lang } }) {
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
   const storyData = await getFetchData(lang);
 
   return {
@@ -48,7 +49,8 @@ export async function generateMetadata({ params: { lang } }) {
   };
 }
 
-export default async function Home({ params: { lang } }) {
+export default async function Home({ params }) {
+  const { lang } = await params;
   const storyData = await getFetchData(lang);
   // console.log('this is lang', lang);
 

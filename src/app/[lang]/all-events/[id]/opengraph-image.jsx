@@ -1,8 +1,5 @@
 import { ImageResponse } from 'next/og';
 
-// Route segment config
-export const runtime = 'edge';
-
 // Image metadata
 export const alt = 'Event Details';
 export const size = {
@@ -15,7 +12,8 @@ export const contentType = 'image/png';
 // Import your data fetching utility
 import { getFetchData } from '@/utils/fetchingData';
 
-export default async function Image({ params: { id } }) {
+export default async function Image({ params }) {
+  const { id } = await params;
   //   console.log('id = ', id);
   // Fetch event data
   const eventData = await getFetchData(id);

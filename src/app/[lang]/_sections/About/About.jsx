@@ -34,8 +34,8 @@ const About = ({ fetchedData }) => {
                 src={title_logo.filename}
                 alt={title_logo.alt}
                 priority={true}
-                width={100}
-                height={80}
+                width={1015}
+                height={620}
                 className='w-[100px] lg:w-[110px] mb-6 lg:mb-5'
                 style={{ height: 'auto' }}
               />

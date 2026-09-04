@@ -1,3 +1,9 @@
+v2.0.0
+
+- update to next.js 16
+  - middleware.js is now proxi.js
+- some SEO corrections that already existed
+
 v1.1.0
 
 - audit fixed all possible vulnerabilities

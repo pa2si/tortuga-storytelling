@@ -59,8 +59,8 @@ const Contact = ({ fetchedData2 }) => {
             src={logo.filename}
             alt={logo.alt}
             priority={true}
-            width={500}
-            height={70}
+            width={1280}
+            height={227}
             className=" w-5/6 sm:w-4/6 md:w-3/6 lg:w-5/6 xl:w-4/6 mx-auto  "
           />
         </div>

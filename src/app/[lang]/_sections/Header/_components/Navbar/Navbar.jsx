@@ -4,7 +4,7 @@ import { socialLinks, email, languages } from './data';
 import { FaBars } from 'react-icons/fa';
 import styles from './Navbar.module.css';
 import Image from 'next/image';
-import { useState, useRef } from 'react';
+import { useLayoutEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useGlobalContext } from '@/utils/context';
@@ -13,6 +13,7 @@ const Navbar = ({ fetchedData, lang }) => {
   const { menu_links, logo } = fetchedData;
   const [showLinks, setShowLinks] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const [linksHeight, setLinksHeight] = useState(0);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
   const { useScroll, useMotionValueEvent } = require('framer-motion');
@@ -24,10 +25,14 @@ const Navbar = ({ fetchedData, lang }) => {
     setShowLinks(!showLinks);
   };
 
+  useLayoutEffect(() => {
+    if (showLinks && linksRef.current) {
+      setLinksHeight(linksRef.current.getBoundingClientRect().height);
+    }
+  }, [showLinks]);
+
   const linkStyles = {
-    height: showLinks
-      ? `${linksRef.current.getBoundingClientRect().height}px`
-      : '0px',
+    height: showLinks ? `${linksHeight}px` : '0px',
   };
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
@@ -120,12 +125,17 @@ const Navbar = ({ fetchedData, lang }) => {
             <div className="flex gap-1 items-center  text-tortuga-dark text-[1rem] lg:gap-2 lg:mr-2 xl:text-lg xl:gap-3 ml-4 xl:ml-20">
               {languages.map((language) => {
                 const { id, url, text } = language;
+                const isActiveLanguage = lang === url.slice(1);
                 return (
                   <li
                     key={id}
-                    className="font-kalam hover:scale-105 hover:text-tortuga-light transition-all duration-200 ease-in-out "
+                    className={`font-kalam ${styles.languageLink} ${
+                      isActiveLanguage ? styles.activeLanguage : ''
+                    }`}
                   >
-                    <Link href={url}>{text}</Link>
+                    <Link href={url} aria-current={isActiveLanguage ? 'page' : undefined}>
+                      {text}
+                    </Link>
                   </li>
                 );
               })}

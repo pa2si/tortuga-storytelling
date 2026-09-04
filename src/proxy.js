@@ -11,7 +11,7 @@ function getLocale(request) {
   return locales.includes(preferredLocale) ? preferredLocale : 'de';
 }
 
-export function middleware(request) {
+export function proxy(request) {
   const { pathname } = request.nextUrl;
 
   // Check if the URL already has a supported locale
@@ -28,5 +28,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: '/((?!_next|favicon.ico|robots.txt).*)',
+  matcher: '/((?!_next|favicon.ico|robots.txt|sitemap.xml).*)',
 };

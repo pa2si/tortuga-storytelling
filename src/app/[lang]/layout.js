@@ -20,13 +20,15 @@ export async function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params }) {
+  const { lang } = await params;
+
   return (
-    <html className='scroll-smooth' lang={params.lang}>
+    <html className='scroll-smooth' data-scroll-behavior='smooth' lang={lang}>
       <body
         className={`${playpenSans.variable} ${indieFlower.variable} ${kalam.variable} ${abhayaLibre.variable}`}
       >
         <AppProvider>
-          <Header params={params} />
+          <Header lang={lang} />
           {children}
           <Toaster position='bottom-right' />
         </AppProvider>

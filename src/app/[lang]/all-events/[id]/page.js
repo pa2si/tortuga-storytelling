@@ -5,7 +5,8 @@ import ShareButton from '../../components/shared/ShareButton';
 import { CiCalendar } from 'react-icons/ci';
 import { SlClock } from 'react-icons/sl';
 
-export async function generateMetadata({ params: { lang, id } }) {
+export async function generateMetadata({ params }) {
+  const { lang, id } = await params;
   const storyData = await getFetchData(lang);
 
   const events = storyData.events_section.event_cards;
@@ -26,7 +27,7 @@ export async function generateMetadata({ params: { lang, id } }) {
     title: selectedEvent.title,
     description: storyData.single_event_section.meta_data_description,
     alternates: {
-      canonical: `/all-events${id}`,
+      canonical: `/${lang}/all-events/${id}`,
       languages: {
         'de-DE': `/de/all-events/${id}`,
         'en-US': `/en/all-events/${id}`,
@@ -52,7 +53,7 @@ export async function generateStaticParams() {
 }
 
 const SingleEvent = async ({ params }) => {
-  const lang = params.lang;
+  const { lang, id } = await params;
   const storyData = await getFetchData(lang);
 
   const events = storyData.events_section.event_cards;
@@ -60,10 +61,10 @@ const SingleEvent = async ({ params }) => {
   const bg = storyData.single_event_section.bg;
 
   // Find the specific event by matching the UID from params.id
-  const selectedEvent = events.find((event) => event._uid === params.id);
+  const selectedEvent = events.find((event) => event._uid === id);
 
   if (!selectedEvent) {
-    console.error('Error: Event not found for id:', params.id);
+    console.error('Error: Event not found for id:', id);
     return (
       <div className='w-screen h-screen flex justify-center items-center'>
         Oops...No event found
