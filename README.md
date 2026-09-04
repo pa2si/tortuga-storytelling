@@ -1,3 +1,7 @@
+v2.1.0
+
+- contact section doesnt provoce a scroll bar in mobile
+
 v2.0.1
 
 - updated gitignore
