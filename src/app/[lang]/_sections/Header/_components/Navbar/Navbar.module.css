@@ -3,7 +3,9 @@
   width: 100%;
   background-color: white;
   box-shadow: var(--shadow-3);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
   z-index: 999;
   position: fixed;
 
@@ -61,7 +63,9 @@
 }
 
 .languageLink {
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .languageLink a {
@@ -158,4 +162,3 @@
     transform: scale(1.1);
   }
 }
-

@@ -18,7 +18,7 @@ export default async function Image({ params }) {
   // Fetch event data
   const eventData = await getFetchData(id);
   const event = eventData?.events_section?.event_cards?.find(
-    (e) => e._uid === id
+    (e) => e._uid === id,
   );
 
   // Handle case where event is not found
@@ -28,14 +28,14 @@ export default async function Image({ params }) {
 
   // ImageResponse JSX element
   const element = (
-    <div tw="relative flex w-full h-full items-center justify-center">
-      <div tw="absolute inset-0 flex">
-        <img tw="flex-1" src={event.image.filename} alt={event.image.alt} />
-        <div tw="absolute inset-0 bg-black bg-opacity-50" />
+    <div tw='relative flex w-full h-full items-center justify-center'>
+      <div tw='absolute inset-0 flex'>
+        <img tw='flex-1' src={event.image.filename} alt={event.image.alt} />
+        <div tw='absolute inset-0 bg-black bg-opacity-50' />
       </div>
-      <div tw="flex flex-col text-neutral-50 z-10">
+      <div tw='flex flex-col text-neutral-50 z-10'>
         {/* Title */}
-        <div tw="text-7xl font-bold">{event.title}</div>
+        <div tw='text-7xl font-bold'>{event.title}</div>
         {/* You can add more content here */}
       </div>
     </div>

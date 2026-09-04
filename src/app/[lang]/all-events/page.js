@@ -42,7 +42,7 @@ const AllEvents = async ({ params }) => {
 
   // Sort event cards from furthest away to oldest
   const sortedEventCards = [...event_cards].sort(
-    (a, b) => new Date(b.date_sort) - new Date(a.date_sort)
+    (a, b) => new Date(b.date_sort) - new Date(a.date_sort),
   );
 
   return (

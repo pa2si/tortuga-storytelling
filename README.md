@@ -1,3 +1,7 @@
+v2.0.1
+
+- updated gitignore
+
 v2.0.0
 
 - update to next.js 16

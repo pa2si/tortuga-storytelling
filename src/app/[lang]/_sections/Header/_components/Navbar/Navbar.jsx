@@ -69,9 +69,9 @@ const Navbar = ({ fetchedData, lang }) => {
               src={logo.filename}
               alt={logo.alt}
               priority={true}
-              width="260"
-              height="260"
-              className="w-3/4 lg:4/4 xl:w-5/6"
+              width='260'
+              height='260'
+              className='w-3/4 lg:4/4 xl:w-5/6'
             />
           </Link>
           <button
@@ -110,7 +110,7 @@ const Navbar = ({ fetchedData, lang }) => {
 
               const { id, url, menu_name } = link;
               return (
-                <li key={id} className="hover:text-tortuga-light">
+                <li key={id} className='hover:text-tortuga-light'>
                   <Link
                     className={className}
                     href={`/${lang}${url}`}
@@ -122,7 +122,7 @@ const Navbar = ({ fetchedData, lang }) => {
               );
             })}
             {/* language buttons */}
-            <div className="flex gap-1 items-center  text-tortuga-dark text-[1rem] lg:gap-2 lg:mr-2 xl:text-lg xl:gap-3 ml-4 xl:ml-20">
+            <div className='flex gap-1 items-center  text-tortuga-dark text-[1rem] lg:gap-2 lg:mr-2 xl:text-lg xl:gap-3 ml-4 xl:ml-20'>
               {languages.map((language) => {
                 const { id, url, text } = language;
                 const isActiveLanguage = lang === url.slice(1);
@@ -133,7 +133,10 @@ const Navbar = ({ fetchedData, lang }) => {
                       isActiveLanguage ? styles.activeLanguage : ''
                     }`}
                   >
-                    <Link href={url} aria-current={isActiveLanguage ? 'page' : undefined}>
+                    <Link
+                      href={url}
+                      aria-current={isActiveLanguage ? 'page' : undefined}
+                    >
                       {text}
                     </Link>
                   </li>
@@ -165,13 +168,13 @@ const Navbar = ({ fetchedData, lang }) => {
               return (
                 <li
                   key={id}
-                  className="text-xl text-tortuga-dark hover:text-tortuga-light hover:scale-105 transition-all duration-200 ease-in-out"
+                  className='text-xl text-tortuga-dark hover:text-tortuga-light hover:scale-105 transition-all duration-200 ease-in-out'
                 >
                   <a
                     key={id}
                     href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target='_blank'
+                    rel='noopener noreferrer'
                   >
                     {icon}
                   </a>
