@@ -41,7 +41,7 @@ const Contacts = ({
           </div>
 
           {/* Button Group */}
-          <div className='flex gap-4 justify-center mt-8 lg:mt-2 border-b-2 border-offset-8 p-2'>
+          <div className='flex gap-4 max-[389px]:gap-2 justify-center mt-8 lg:mt-2 border-b-2 border-offset-8 p-2'>
             {contact_btns.map((btn) => {
               const { _uid, btn_name } = btn;
 
