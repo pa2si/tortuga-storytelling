@@ -1,7 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { getFetchData } from '@/utils/fetchingData';
-import { CiCalendar } from 'react-icons/ci';
+import AllEventsList from './_components/AllEventsList';
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
@@ -47,10 +46,10 @@ const AllEvents = async ({ params }) => {
 
   return (
     <section
-      className='min-w-screen min-h-svh flex items-center justify-center'
+      className='min-w-screen min-h-svh flex justify-center mobile-bg-adjust'
       style={{
         backgroundImage: `linear-gradient(to right, rgba(180, 180, 180, 0.37),  rgba(180, 180, 180, 0.37)), url(${bg.filename})`,
-        /*      backgroundAttachment: 'fixed', */
+        backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }}
@@ -66,58 +65,12 @@ const AllEvents = async ({ params }) => {
           </div>
         </div>
         {/* events container */}
-        <ul className='flex flex-wrap gap-3 justify-center sm:gap-10 '>
-          {sortedEventCards.map((event) => {
-            // console.log('lang is', lang);
-            const singleEventUrl = `/${lang}/all-events/${event._uid}`;
-
-            return (
-              <li
-                key={event._uid}
-                className='flex flex-col sm:min-w-[12rem] border-2 border-tortuga-light bg-opacity-80 w-[10rem] md:w-[15rem] group rounded-lg hover:scale-105 transition-all duration-400 ease-in-out'
-              >
-                <Link
-                  href={singleEventUrl}
-                  className='block relative w-full h-[9rem] sm:h-[12rem] shadow-lg '
-                >
-                  <Image
-                    src={event.image.filename}
-                    alt={event.image.alt}
-                    priority={true}
-                    fill={true}
-                    sizes='30vw'
-                    className='object-cover absolute rounded-md'
-                  />
-                  <div className='flex justify-center items-center opacity-0 group-hover:opacity-100 absolute inset-0 bg-gray-600 bg-opacity-60 transition-opacity duration-400 ease-in-out visibility-hidden group-hover:visibility-visible'>
-                    <span className='text-white text-lg'>{hover_text}</span>
-                  </div>
-                </Link>
-
-                <div className=' py-4 flex-grow mx-2'>
-                  <h3 className='text-lg leading-5 sm:leading-7 sm:text-2xl mb-2 font-kalam'>
-                    {event.title}
-                  </h3>
-                  <div className=' mb-2  text-tortuga-dark '>
-                    <div className='flex gap-2 items-center'>
-                      <i className='text-xl '>
-                        <CiCalendar />
-                      </i>
-                      <p>{event.date}</p>
-                    </div>
-                  </div>
-                </div>
-                <div className='text-sm px-6 ot-1 sm:pt-4 pb-2 flex justify-center xl:hidden '>
-                  <Link
-                    href={singleEventUrl}
-                    className='bg-tortuga-dark hover:bg-tortuga-light text-white font-kalam py-2 px-4 rounded transition-all duration-200 ease-in-out'
-                  >
-                    {moreInfo_btn_text}
-                  </Link>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
+        <AllEventsList
+          allEvents={sortedEventCards}
+          lang={lang}
+          hover_text={hover_text}
+          moreInfo_btn_text={moreInfo_btn_text}
+        />
         <button className=' w-fit mx-auto mt-16 text-md sm:text-xl hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-4 rounded transition-all duration-200 ease-in-out'>
           <Link href={`/${lang}`}>{btn_text}</Link>
         </button>

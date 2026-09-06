@@ -1,3 +1,7 @@
+v2.2.0
+
+- infite scrolling implemented
+
 v2.1.1
 
 - buttons in contacts are more tighten when under 390px
