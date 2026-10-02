@@ -1,3 +1,7 @@
+v2.2.1
+
+- Next.js securuty update
+
 v2.2.0
 
 - infite scrolling implemented
