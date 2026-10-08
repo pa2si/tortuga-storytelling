@@ -1,3 +1,11 @@
+to do:
+
+update react to 19 and find out why the engine is set to node version 22
+
+v2.2.2
+
+- updated to next.js 16.4
+
 v2.2.1
 
 - Next.js securuty update
