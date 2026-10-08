@@ -24,16 +24,16 @@ const Events = ({ fetchedData, lang }) => {
       className='mobile-bg-adjust'
     >
       <div
-        className='relative mx-4 bg-gray-100 bg-opacity-0 sm:mx-0 sm:bg-opacity-5 lg:mx-8 xl:mx-0 rounded-lg'
+        className='relative mx-4 bg-gray-100/0 sm:mx-0 sm:bg-gray-100/5 lg:mx-8 xl:mx-0 rounded-lg'
         id='events'
       >
-        <div className='pt-8 pb-10 sm:mx-8 max-w-6xl lg:mx-auto lg:pt-12 lg:pb-12 lg:px-16 bg-white bg-opacity-95 rounded-xl slider-events'>
+        <div className='pt-8 pb-10 sm:mx-8 max-w-6xl lg:mx-auto lg:pt-12 lg:pb-12 lg:px-16 bg-white/95 rounded-xl slider-events'>
           {/* Title */}
           <div className=' w-full flex flex-col justify-center items-center xl:mb-0'>
             <div className='flex flex-col items-center'>
               <h2 className='font-title text-black text-center'>{title}</h2>
               <div className='relative w-full h-1 mt-7 sm:mt-4 md:mt-1'>
-                <div className='absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent'></div>
+                <div className='absolute inset-0 bg-linear-to-r from-transparent via-tortuga-light to-transparent'></div>
               </div>
             </div>
           </div>
@@ -48,7 +48,7 @@ const Events = ({ fetchedData, lang }) => {
             </div>
           )}
           <div className='mt-16 flex justify-center'>
-            <button className='flex leading-tight mb-1 text-2xl hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam pt-1 px-4 sm:px-4 rounded transition-all duration-200 ease-in-out'>
+            <button className='flex leading-tight mb-1 text-2xl hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam pt-1 px-4 sm:px-4 rounded-sm transition-all duration-200 ease-in-out'>
               <Link href={allEventsUrl}>{gallery_view_btn}</Link>
             </button>
           </div>

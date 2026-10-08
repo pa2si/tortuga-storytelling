@@ -32,7 +32,7 @@ const Modal = () => {
                 {selectedEvent.title}
               </h5>
               <div className="relative w-full h-1 ">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-transparent via-tortuga-light to-transparent"></div>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@ const Modal = () => {
             priority={true}
             width="300"
             height="300"
-            className="rounded-md h-[10rem] md:h-[15rem] shadow-lg  mt-1"
+            className="rounded-md h-40 md:h-60 shadow-lg  mt-1"
           />
           <span className="inline-block rounded-full px-1 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
             {selectedEvent.image.copyright}
@@ -53,8 +53,8 @@ const Modal = () => {
             <br />
             {selectedEvent.description2}
           </p>
-          <div className="mt-4 pt-1 leading-[1.4rem] text-[1.1rem] md:text-[1.2rem] md:leading-[1.5rem] lg:text-[1.3rem] lg:leading-[1.7rem]">
-            <div className=" bg-tortuga-light h-[2px] mb-2 "></div>{' '}
+          <div className="mt-4 pt-1 leading-[1.4rem] text-[1.1rem] md:text-[1.2rem] md:leading-6 lg:text-[1.3rem] lg:leading-[1.7rem]">
+            <div className=" bg-tortuga-light h-0.5 mb-2 "></div>{' '}
             <div className="flex  items-center gap-4 mb-3 justify-center">
               <div
                 className={`text-tortuga-dark text-[1.3rem] lg:text-[1.4rem] tracking-wide ${

@@ -16,16 +16,16 @@ const Programs = ({ fetchedData }) => {
       className="mobile-bg-adjust"
     >
       <div
-        className="relative max-h-fit mx-4 text-black overflow-auto bg-opacity-0 bg-slate-300 sm:mx-0 sm:bg-opacity-10 lg:mx-8 xl:mx-0 rounded-lg "
+        className="relative max-h-fit mx-4 text-black overflow-auto bg-slate-300/0 sm:mx-0 sm:bg-slate-300/10 lg:mx-8 xl:mx-0 rounded-lg "
         id="programs"
       >
-        <div className=" my-10 pt-8 pb-12 sm:mx-8 max-w-6xl lg:mx-auto lg:py-12 lg:px-16 xl:px-0 bg-white bg-opacity-95 rounded-xl slider-programs">
+        <div className=" my-10 pt-8 pb-12 sm:mx-8 max-w-6xl lg:mx-auto lg:py-12 lg:px-16 xl:px-0 bg-white/95 rounded-xl slider-programs">
           {/* Title */}
           <div className=" w-full flex justify-center items-center ">
             <div className="flex flex-col items-center">
               <h2 className="font-title text-black text-center">{title}</h2>
               <div className="relative w-full h-1 mt-8 sm:mt-4 md:mt-1">
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-transparent via-tortuga-light to-transparent"></div>
               </div>
             </div>
           </div>

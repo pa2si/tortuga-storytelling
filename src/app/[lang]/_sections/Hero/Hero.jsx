@@ -37,7 +37,7 @@ const Hero = ({ fetchedData }) => {
       className="mobile-bg-adjust"
     >
       <motion.section
-        className={`relative h-[30rem] sm:h-[42rem] w-full  ${styles.heroContainer}`}
+        className={`relative h-120 sm:h-168 w-full  ${styles.heroContainer}`}
         style={{
           filter: blurProgress,
           opacity: opacityProgress,
@@ -51,7 +51,7 @@ const Hero = ({ fetchedData }) => {
           className="object-cover overflow-hidden absolute w-auto"
           priority={true}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black z-10"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-black z-10"></div>
       </motion.section>
     </section>
   );

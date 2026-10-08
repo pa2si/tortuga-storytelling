@@ -58,7 +58,7 @@ const Navbar = ({ fetchedData, lang }) => {
       transition={{ duration: 0.35, ease: 'easeInOut' }}
     >
       <div
-        className={` mx-auto max-w-screen-2xl pr-2 xl:px-10  ${styles.nav_center}`}
+        className={` mx-auto max-w-(--breakpoint-2xl) pr-2 xl:px-10  ${styles.nav_center}`}
       >
         {/* header */}
 
@@ -99,13 +99,13 @@ const Navbar = ({ fetchedData, lang }) => {
             {menu_links.map((link) => {
               let className = '';
               if (link.url === '#events' && isEventsInView) {
-                className = '!text-tortuga-dark';
+                className = 'text-tortuga-dark!';
               } else if (link.url === '#programs' && isProgramsInView) {
-                className = '!text-tortuga-dark';
+                className = 'text-tortuga-dark!';
               } else if (link.url === '#about' && isAboutInView) {
-                className = '!text-tortuga-dark';
+                className = 'text-tortuga-dark!';
               } else if (link.url === '#contact' && isContactInView) {
-                className = '!text-tortuga-dark';
+                className = 'text-tortuga-dark!';
               }
 
               const { id, url, menu_name } = link;

@@ -54,13 +54,13 @@ const AllEvents = async ({ params }) => {
         backgroundSize: 'cover',
       }}
     >
-      <article className=' flex flex-col max-w-6xl max-h-content m-auto mt-20 mb-2 sm:mt-22 mx-4 pt-3 sm:p-3 pb-8 sm:mx-8 md:p-8 bg-white bg-opacity-95 rounded-xl '>
+      <article className=' flex flex-col max-w-6xl max-h-content m-auto mt-20 mb-2 sm:mt-22 mx-4 pt-3 sm:p-3 pb-8 sm:mx-8 md:p-8 bg-white/95 rounded-xl '>
         {/* title */}
         <div className=' flex flex-col justify-center items-center mb-8'>
           <div className='flex flex-col items-center'>
             <h2 className='font-title text-black text-center'>{title}</h2>
             <div className='relative w-full h-1 mt-7 sm:mt-4 md:mt-1'>
-              <div className='absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent'></div>
+              <div className='absolute inset-0 bg-linear-to-r from-transparent via-tortuga-light to-transparent'></div>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ const AllEvents = async ({ params }) => {
           hover_text={hover_text}
           moreInfo_btn_text={moreInfo_btn_text}
         />
-        <button className=' w-fit mx-auto mt-16 text-md sm:text-xl hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-4 rounded transition-all duration-200 ease-in-out'>
+        <button className=' w-fit mx-auto mt-16 text-md sm:text-xl hover:text-tortuga-light text-tortuga-dark border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-4 rounded-sm transition-all duration-200 ease-in-out'>
           <Link href={`/${lang}`}>{btn_text}</Link>
         </button>
       </article>

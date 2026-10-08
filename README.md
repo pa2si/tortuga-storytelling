@@ -1,6 +1,7 @@
-to do:
+v2.3.0
 
-update react to 19 and find out why the engine is set to node version 22
+- updated form to react 18 to 19, removed forced engine node 22x, tailwind 3 to 4
+- added changes to make tailwind 4 work
 
 v2.2.2
 

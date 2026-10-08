@@ -74,7 +74,7 @@ const Program = ({
           </div>
         </div>
         {/* Program Image */}
-        <div className="relative flex justify-center items-center w-full h-[14rem] mx-auto mb-20 sm:h-[18rem] md:h-[22rem] lg:h-[26rem] xl:mb-0 xl:place-self-center  order-first xl:order-last">
+        <div className="relative flex justify-center items-center w-full h-56 mx-auto mb-20 sm:h-72 md:h-88 lg:h-104 xl:mb-0 xl:place-self-center  order-first xl:order-last">
           <Image
             src={image.filename}
             alt={image.alt || 'Program Image'}

@@ -27,15 +27,15 @@ const Contacts = ({
       className='mobile-bg-adjust'
     >
       <div
-        className='relative mx-4 overflow-x-hidden bg-opacity-0 sm:mx-0 lg:mx-8 xl:mx-0 text-slate-50 bg-gray-500 sm:bg-opacity-30'
+        className='relative mx-4 overflow-x-hidden sm:mx-0 lg:mx-8 xl:mx-0 text-slate-50 sm:bg-gray-500/30'
         id='contact'
       >
-        <div className='mb-10 sm:mx-8 max-w-6xl lg:mx-auto pt-8 pb-1 lg:py-12 lg:px-16 bg-white bg-opacity-95 rounded-xl'>
+        <div className='mb-10 sm:mx-8 max-w-6xl lg:mx-auto pt-8 pb-1 lg:py-12 lg:px-16 bg-white/95 rounded-xl'>
           <div className=' w-full flex justify-center items-center '>
             <div className='flex flex-col items-center'>
               <h2 className='font-title text-black text-center'>{title}</h2>
               <div className='relative w-full h-1 mt-6 md:mt-1 mb-4'>
-                <div className='absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent'></div>
+                <div className='absolute inset-0 bg-linear-to-r from-transparent via-tortuga-light to-transparent'></div>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ const Contacts = ({
             )}
           </AnimatePresence>
         </div>
-        {/* <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white  z-10"></div> */}
+        {/* <div className="absolute inset-0 bg-linear-to-b from-white via-transparent to-white  z-10"></div> */}
       </div>
     </section>
   );

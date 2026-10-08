@@ -81,7 +81,7 @@ const SingleEvent = async ({ params }) => {
         backgroundPosition: 'center',
       }}
     >
-      <div className='max-w-4xl mx-4 my-auto p-3 pb-8 md:p-8 lg:mx-8 mt-20 bg-white bg-opacity-95 rounded-xl shadow-lg'>
+      <div className='max-w-4xl mx-4 my-auto p-3 pb-8 md:p-8 lg:mx-8 mt-20 bg-white/95 rounded-xl shadow-lg'>
         <div className='grid'>
           <div className=' w-full'>
             {/* Title */}
@@ -91,7 +91,7 @@ const SingleEvent = async ({ params }) => {
                   {selectedEvent.title}
                 </h3>
                 <div className='relative w-full h-1 mt-1 sm:mt-4 md:mt-1'>
-                  <div className='absolute inset-0 bg-gradient-to-r from-transparent via-tortuga-light to-transparent'></div>
+                  <div className='absolute inset-0 bg-linear-to-r from-transparent via-tortuga-light to-transparent'></div>
                 </div>
               </div>
             </div>
@@ -114,7 +114,7 @@ const SingleEvent = async ({ params }) => {
               {/* Line above the event address */}
               <div className='text-gray-600 mt-16 text-abhayaLibre italic'>
                 <div className='grid grid-col justify-end text-right'>
-                  <div className=' bg-tortuga-light h-[2px] mb-2 '></div>{' '}
+                  <div className=' bg-tortuga-light h-0.5 mb-2 '></div>{' '}
                   {/* Line Element */}
                   <div className='flex flex-col items-end gap-1'>
                     <div
@@ -174,7 +174,7 @@ const SingleEvent = async ({ params }) => {
           <div className='flex justify-center'>
             <Link
               href={`/${lang}/all-events/`}
-              className='mt-4 sm:mt-8 text-md sm:text-lg text-tortuga-dark hover:text-tortuga-light border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-8 rounded transition-all duration-200 ease-in-out'
+              className='mt-4 sm:mt-8 text-md sm:text-lg text-tortuga-dark hover:text-tortuga-light border-2 border-tortuga-dark hover:border-tortuga-light font-kalam py-1 px-8 rounded-sm transition-all duration-200 ease-in-out'
             >
               {' '}
               {backButton}

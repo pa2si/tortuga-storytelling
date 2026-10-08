@@ -31,7 +31,7 @@ export default async function Image({ params }) {
     <div tw='relative flex w-full h-full items-center justify-center'>
       <div tw='absolute inset-0 flex'>
         <img tw='flex-1' src={event.image.filename} alt={event.image.alt} />
-        <div tw='absolute inset-0 bg-black bg-opacity-50' />
+        <div tw='absolute inset-0 bg-black/50' />
       </div>
       <div tw='flex flex-col text-neutral-50 z-10'>
         {/* Title */}

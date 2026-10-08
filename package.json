@@ -1,10 +1,7 @@
 {
   "name": "tortuga",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "private": true,
-  "engines": {
-    "node": "22.x"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,23 +9,23 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "framer-motion": "^10.16.12",
+    "framer-motion": "^12.43.0",
     "next": "^16.4.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.12.0",
     "react-intersection-observer": "^9.5.3",
-    "react-slick": "^0.29.0",
+    "react-slick": "^0.31.0",
     "sharp": "^0.35.4",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.0.1",
+    "@tailwindcss/postcss": "^4.3.3",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.0",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0"
+    "tailwindcss": "^4.3.3"
   },
   "overrides": {
     "glob": "^10.4.5"

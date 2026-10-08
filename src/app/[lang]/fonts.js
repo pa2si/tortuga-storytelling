@@ -19,11 +19,11 @@ export const indieFlower = Indie_Flower({
 export const kalam = Kalam({
   subsets: ['latin'],
   weight: ['300', '400', '700'],
-  variable: '--font-kalam',
+  variable: '--next-font-kalam',
 });
 
 export const abhayaLibre = Abhaya_Libre({
   subsets: ['latin'],
   weight: ['400', '700'],
-  variable: '--font-abhayaLibre',
+  variable: '--next-font-abhayaLibre',
 });
