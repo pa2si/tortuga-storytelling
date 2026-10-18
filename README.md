@@ -1,3 +1,7 @@
+v2.3.1
+
+- update next.js to 16.4.1
+
 v2.3.0
 
 - updated form to react 18 to 19, removed forced engine node 22x, tailwind 3 to 4
