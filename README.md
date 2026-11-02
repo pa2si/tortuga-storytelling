@@ -1,4 +1,10 @@
-- to do: check tailwind update
+- v2.3.3
+
+- chore: update dependencies for Node.js 26
+
+Upgrade Next.js, React, Framer Motion, React Icons, and
+react-intersection-observer. Refresh related dependencies and
+apply available npm audit fixes.
 
 - v2.3.2
 
