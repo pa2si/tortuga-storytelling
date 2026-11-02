@@ -1,3 +1,20 @@
+- to do: check tailwind update
+
+- v2.3.2
+
+### Dependency updates
+
+- Next.js 16.4.1 → 16.4.3 (and eslint-config-next to match)
+- React and React DOM 19.3.0 → 19.3.1
+- Framer Motion 12.43.0 → 14.9.0
+- React Icons 4.12.0 → 5.7.0
+- React Intersection Observer 9.5.3 → 11.0.1
+- React Hot Toast 2.4.1 → 2.6.1
+- PostCSS 8 → 8.5.32
+- npm audit fix: resolved the high-severity zod advisory. 16 moderate advisories remain, all dev-only (eslint plugin chain via minimatch).
+- Not updated: ESLint 10 (not evaluated) and slick-carousel 2.0.0 (adds a jQuery peer dependency and is not needed, because only its CSS is used).
+- Verified on Node 26: build, dev and lint pass.
+
 v2.3.1
 
 - update next.js to 16.4.1
