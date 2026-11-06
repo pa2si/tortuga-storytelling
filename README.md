@@ -1,3 +1,7 @@
+- v2.3.4
+
+next patch -> 16.4.5
+
 - v2.3.3
 
 - chore: update dependencies for Node.js 26
